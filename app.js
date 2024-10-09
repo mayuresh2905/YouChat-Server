@@ -75,7 +75,7 @@ app.get("/", (req, res) => {
 io.use((socket,next) => {
     cookieParser()(
         socket.request,
-        socket.request.resume, 
+        socket.request.res, 
         async (err) => await socketAuthenticator(err, socket,next)
     );
 });
@@ -161,4 +161,4 @@ app.use(errorMiddleware);
 
 server.listen(port,() => {
     console.log(`Server is running at http://localhost:${port} in ${envMode} mode`);  
-})
+});
