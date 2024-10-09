@@ -57,7 +57,7 @@ app.set("io",io);
 //Using Middleware Here
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(corsOptions))
+app.use(cors(corsOptions));
 
 app.use('/api/v1/user',userRoute);
 app.use("/api/v1/chat",chatRoute);
@@ -67,6 +67,10 @@ app.use("/api/v1/admin",adminRoute);
 // createSingleChats(10);
 // createGroupChats(10);
 // createMessagesInAChat("66bb6f22f650e29b66914d0f",50);
+
+app.get("/", (req, res) => {
+    res.send("Hello World");
+});
 
 io.use((socket,next) => {
     cookieParser()(
