@@ -1,0 +1,14 @@
+MONGO_URI = mongodb://localhost:27017 || mongodb://127.0.0.1:27017
+
+JWT_SECRET=djgjkdshbgjkhfnjksdfhbnsjkdfsdhjfk
+
+ADMIN_SECRET_KEY= sample admin key
+
+NODE_ENV = DEVELOPMENT
+
+CLIENT_URL = frontend url
+
+
+CLOUDINARY_CLOUD_NAME= YOUR CLOUD NAME
+CLOUDINARY_API_KEY = YOUR CLOUD API KEY
+CLOUDINARY_API_SECRET =  YOUR CLOUD SECRET
